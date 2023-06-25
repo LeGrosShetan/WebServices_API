@@ -1,0 +1,27 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+
+/* Ajoutez vos styles CSS personnalisés ici */
+.jumbotron {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.table {
+  margin-bottom: 20px;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+}
+
+.glyphicon {
+  margin-right: 5px;
+}
