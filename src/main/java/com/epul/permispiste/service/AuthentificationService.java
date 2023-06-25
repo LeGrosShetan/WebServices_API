@@ -26,7 +26,7 @@ public class AuthentificationService implements IAuthentificationService{
         unUtilisateur = unUtilisateurRepostory.rechercheNom(unUti.getNomUtil());
         if (unUtilisateur != null) {
             try {
-                if(!unUtilisateur.getMotPasse().equals(FonctionsUtiles.md5(pwd))){
+                if(!unUtilisateur.getMotPasse().equals(pwd)){
                     return null;
                 }
             } catch (MonException e) {

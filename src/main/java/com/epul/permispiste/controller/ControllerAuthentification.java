@@ -15,11 +15,14 @@ public class ControllerAuthentification {
     @Autowired
     private AuthentificationService unAuthenService;
 
-    @GetMapping(value = "/login")
+    @PostMapping(value = "/login")
     public UtilisateurEntity controleLogin(@RequestBody AppUser appUser) throws Exception {
         UtilisateurEntity unUtilisateur = unAuthenService.authentification(appUser);
         if (unUtilisateur == null) {
+            unUtilisateur = new UtilisateurEntity();
+            unUtilisateur.setNomUtil("erreur");
             unUtilisateur.setNumUtil(-1);
+            unUtilisateur.setMotPasse("erreur");
         }
         return unUtilisateur;
     }
